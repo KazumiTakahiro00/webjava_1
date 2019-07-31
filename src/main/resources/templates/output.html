@@ -1,0 +1,41 @@
+    <!-- bodyタブ内部のみ -->
+    <h3>カート合計</h3>
+    <table border="1">
+         <tr>
+            <th>商品番号</th>
+            <th>合計数量</th>
+            <th>合計金額</th>
+         </tr>
+         <tr>
+            <th>
+    	        <div th:object="${listform}" th:text="*{num1}"></div>
+			</th>
+            <th>
+    	        <div th:object="${listform}" th:text="*{num1}"></div>
+			</th>
+            <th>
+    	        <div th:object="${listform}" th:text="*{num1}"></div>
+			</th>
+         </tr>
+         <tr>
+            <th>
+    	        <div th:object="${listform}" th:text="*{num2}"></div>
+			</th>
+            <th>
+    	        <div th:object="${listform}" th:text="*{num2}"></div>
+			</th>
+            <th>
+    	        <div th:object="${listform}" th:text="*{num2}"></div>
+			</th>
+         </tr>
+    <div th:object="${listform}">
+	    <label>商品番号1</label><br>
+    	<span th:text="*{num1}"></span><br>
+    	<label>数量1</label><br>
+    	<span th:text="*{num1}"></span><br>
+    	<label>商品番号2</label><br>
+    	<span th:text="*{num2}"></span><br>
+    	<label>数量2</label><br>
+    	<span th:text="*{num2}"></span><br>
+    	</div>
+    </table>

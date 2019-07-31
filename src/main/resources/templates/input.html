@@ -1,0 +1,11 @@
+    <!-- bodyタブ内部のみ -->
+    <h3>商品選択</h3>
+    <form th:action="@{/output}" method="post" th:object="${listform}">
+    <label>商品番号(1～2)</label><br>
+    <input type="text" th:field="*{num1}"><br>
+    <label>数量</label><br>
+    <input type="text" th:field="*{num2}"><br>
+    <label>コメント</label><br>
+    <input type="text" th:field="*{num2}"><br>
+    <button>カートに追加</button>
+    </form>

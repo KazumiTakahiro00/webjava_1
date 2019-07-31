@@ -1,0 +1,39 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Product Items</title>
+    </head>
+    <body>
+        <h3>商品一覧</h3>
+            <table border="1">
+                <tr>
+                    <th>itemId</th>
+                    <th>name</th>
+                    <th>price</th>
+                </tr>
+                <tr>
+                    <th>
+                        <div th:text="${Item.itemId1}"></div>
+					</th>
+                    <th>
+         				<div th:text="${Item.name1}"></div>
+					</th>
+                    <th>
+            			<div th:text="${Item.price1}"></div>
+					</th>
+                </tr>
+                <tr>
+                    <th>
+                        <div th:text="${Item.itemId2}"></div>
+					</th>
+                    <th>
+         				<div th:text="${Item.name2}"></div>
+					</th>
+                    <th>
+            			<div th:text="${Item.price2}"></div>
+					</th>
+                </tr>
+            </table>
+    </body>
+</html>
