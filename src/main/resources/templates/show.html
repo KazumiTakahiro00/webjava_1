@@ -6,6 +6,8 @@
     </head>
     <body>
         <h3>商品一覧</h3>
+            <form th:action="@{/order}">
+
             <table border="1">
                 <tr>
                     <th>itemId</th>
@@ -35,5 +37,8 @@
 					</th>
                 </tr>
             </table>
+		<button>注文画面へ進む</button>
+       	</form>
+
     </body>
 </html>
