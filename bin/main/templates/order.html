@@ -1,9 +1,40 @@
     <!-- bodyタブ内部のみ -->
     <h3>商品選択</h3>
-    <form th:action="@{/output}" method="get" th:object="${listform}">
+    <form th:action="@{/order}" method="get" th:object="${listform}">
     <label>商品番号1 注文数量を以下に入力して下さい</label><br>
-    <input type="text" th:field="*{num1}"><br>
+    <input type="number" style="width:50px" name="num1"><br>
     <label>商品番号2 注文数量を以下に入力して下さい</label><br>
-    <input type="text" th:field="*{num2}"><br>
+    <input type="number" style="width:50px" name="num2"><br>
     <button>カートに追加</button>
     </form>
+
+    <h3>カート合計表示</h3>
+    <table border="1">
+         <tr>
+            <th>商品番号</th>
+            <th>合計数量</th>
+            <th>合計金額</th>
+         </tr>
+         <tr>
+            <th>
+    	        <div th:object="${listform}" th:text="1"></div>
+			</th>
+            <th>
+    	        <div th:text="${listform.num1}"></div>
+			</th>
+            <th>
+    	        <div th:object="${listform}" th:text="*{num1_sum}"></div>
+			</th>
+         </tr>
+         <tr>
+            <th>
+    	        <div th:object="${listform}" th:text="2"></div>
+			</th>
+            <th>
+    	        <div th:object="${listform}" th:text="*{num2}"></div>
+			</th>
+            <th>
+    	        <div th:object="${listform}" th:text="*{num2_sum}"></div>
+			</th>
+         </tr>
+    </table>
